@@ -67,3 +67,33 @@ for(var i = 3; i < 30; i++){
 
 
 console.log(fibonacci)
+
+
+
+
+//INSERINDO ELEMENTOS NO ARRAY
+
+var numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(numeros)
+
+numeros[10] = 10
+console.log(numeros)
+
+numeros[numeros.length] = 11
+console.log(numeros)
+
+
+//Obs. acima nao é a melhor forma de inserir elementos no array
+// O array tem alguns métodos nativos e um dos métodos se chama push que insere elemento ao final do array
+numeros.push(12)
+numeros.push(13)
+numeros.push(14)
+numeros.push(15)
+numeros.push(16)
+console.log(numeros)
+
+//Para inserir elementos antes usamos o método unshift()
+numeros.unshift(-1)
+numeros.unshift(-2)
+
+console.log(numeros)
