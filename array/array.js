@@ -97,3 +97,31 @@ numeros.unshift(-1)
 numeros.unshift(-2)
 
 console.log(numeros)
+
+
+//REMOVENDO ELEMENTOS
+
+//Método Pop() retira o ultimo elemento do array
+numeros.pop()
+console.log(numeros)
+
+//Método shift() retira elemento do início do array
+numeros.shift()
+console.log(numeros)
+
+//INSERINDO E REMOVENDO DE POSIÇÕES ESPECÍFICAS
+
+//REMOVENDO
+//Com método splice(posição inicial, quantidade de casas) Remove elementos do array
+
+//Em nosso exemplo vamos remover os elementos que estão nos indeces [4, 5, 6, 7], o que vai apagar os números 3, 4, 5, 6
+numeros.splice(4, 4)
+console.log(numeros)
+
+//INSERINDO
+//Com o mesmo método splice() inserimos elementos
+// splice(posicialInicial, adiciona 0, para inserir, os elementos que serão adiconados)
+
+
+numeros.splice(4, 0, 6, 6, 6, 6)
+console.log(numeros)
