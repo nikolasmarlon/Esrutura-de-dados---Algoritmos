@@ -125,3 +125,24 @@ console.log(numeros)
 
 numeros.splice(4, 0, 6, 6, 6, 6)
 console.log(numeros)
+
+
+// Arrays bidimensionais
+
+var temperaturaMediaSemanal = []
+
+var temperaturaSemana1 = [33, 32, 20, 34, 42, 21]
+var temperaturaSemana2 = [34, 36, 21, 36, 48, 23]
+var temperaturaSemana3 = [13, 42, 26, 35, 45, 24]
+
+
+temperaturaMediaSemanal[0] = temperaturaSemana1
+temperaturaMediaSemanal[1] = temperaturaSemana2
+temperaturaMediaSemanal[2] = temperaturaSemana3
+
+
+console.log(temperaturaMediaSemanal)
+
+//para acessar um indece dentro do array bidimensional precisamos de dois índices 
+//imprime o primeiro indice do primeiro array
+console.log(temperaturaMediaSemanal[0][0])
