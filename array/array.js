@@ -145,4 +145,13 @@ console.log(temperaturaMediaSemanal)
 
 //para acessar um indece dentro do array bidimensional precisamos de dois índices 
 //imprime o primeiro indice do primeiro array
-console.log(temperaturaMediaSemanal[0][0])
+console.log('temperatura no indece [0][0] ' + temperaturaMediaSemanal[0][0])
+
+
+//imprimindo todos os indices do array bidimensional 
+
+for(var i = 0; i < temperaturaMediaSemanal.length; i++){
+    for(var j = 0; j < temperaturaMediaSemanal[i].length; j++){
+        console.log(temperaturaMediaSemanal[i][j])
+    }
+}
