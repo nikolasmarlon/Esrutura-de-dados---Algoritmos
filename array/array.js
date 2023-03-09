@@ -134,11 +134,13 @@ var temperaturaMediaSemanal = []
 var temperaturaSemana1 = [33, 32, 20, 34, 42, 21]
 var temperaturaSemana2 = [34, 36, 21, 36, 48, 23]
 var temperaturaSemana3 = [13, 42, 26, 35, 45, 24]
+var temperaturaSemana4 = [13, 42, 26, 35, 45, 24]
 
 
 temperaturaMediaSemanal[0] = temperaturaSemana1
 temperaturaMediaSemanal[1] = temperaturaSemana2
 temperaturaMediaSemanal[2] = temperaturaSemana3
+temperaturaMediaSemanal[3] = temperaturaSemana4
 
 
 console.log(temperaturaMediaSemanal)
@@ -153,5 +155,26 @@ console.log('temperatura no indece [0][0] ' + temperaturaMediaSemanal[0][0])
 for(var i = 0; i < temperaturaMediaSemanal.length; i++){
     for(var j = 0; j < temperaturaMediaSemanal[i].length; j++){
         console.log(temperaturaMediaSemanal[i][j])
+    }
+}
+
+var mes = [temperaturaMediaSemanal]
+
+//imprime todo o array tridimensional
+console.log(mes)
+
+//imprime o primeiro indice do array temperaturaSemana1, que está dentro do array temperaturaMediaSemanal, que está dentro do array mes
+console.log(mes[0][0][0])
+
+
+//imprimindo todos os indices do array tridimensional
+
+for(var i = 0; i < mes.length; i++){
+    
+    for(var j = 0; j < mes[i].length; j++){
+        console.log("Semana")
+        for(var k = 0; k < mes[i][j].length; k++){
+            console.log("Dia " + mes[i][j][k])
+        }
     }
 }
