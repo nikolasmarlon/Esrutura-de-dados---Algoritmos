@@ -47,3 +47,18 @@ function Pilha(){
         console.log(itens.toString())
     }
 }
+
+
+//instacia do objeto
+var pilha = new Pilha()
+
+
+pilha.adicionarNovoItem(1)
+pilha.adicionarNovoItem(2)
+pilha.adicionarNovoItem(3)
+pilha.adicionarNovoItem(4)
+
+
+console.log(pilha.peek())
+console.log(pilha.isEmpty())
+pilha.print()
