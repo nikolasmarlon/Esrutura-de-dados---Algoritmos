@@ -1,0 +1,6 @@
+
+
+
+function Pilha(){
+    var itens = []
+}
