@@ -4,31 +4,46 @@
 function Pilha(){
     var itens = []
 
-    this.push = function(elemento){
+    this.adicionarNovoItem = function(elemento){
         //adiciona um novo item à pilha
+        itens.push(elemento)
     }
 
-    this.pop = function(){
+    this.removerItem = function(){
         //remove o item do topo da pilha
+
+        //pop retira o ultimo elemento da pilha
+        return itens.pop()
     }
 
     this.peek = function(){
-        //devolve o elemento que está no topo da pilha
+        //Retorna o elemento que está no topo da pilha
+        return itens[itens.length - 1]
     }
 
     this.isEmpty = function(){
         //Informa se a pilha está vazia ou não
+
+        //verifica se o tamanho do array(pilha) é igual a zero
+        return itens.length === 0
     }
 
     this.clear = function(){
         //Limpa a pilha
+
+        //atribui um array vazio
+        itens = []
     }
 
     this.size = function(){
         //informar o tamanho da pilha
+
+        return itens.length
     }
 
     this.print = function(){
         //imprime a pilha no console
+
+        console.log(itens.toString())
     }
 }
