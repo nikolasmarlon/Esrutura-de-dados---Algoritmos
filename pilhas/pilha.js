@@ -53,12 +53,38 @@ function Pilha(){
 var pilha = new Pilha()
 
 
-pilha.adicionarNovoItem(1)
-pilha.adicionarNovoItem(2)
-pilha.adicionarNovoItem(3)
-pilha.adicionarNovoItem(4)
+//Exercício converter decimal para binário
+// este exercício usa pilhas para implementar o algorítimo
+
+function decimalParaBinario(numeroDecimal) {
 
 
-console.log(pilha.peek())
-console.log(pilha.isEmpty())
-pilha.print()
+    var pilhaDeRestos = [],
+    resto,
+    stringDeBinarios = ''
+
+    while(numeroDecimal > 0){
+
+        //arredonda para baixo o resto da divisão 
+        resto = Math.floor(numeroDecimal % 2)
+
+        //adiciona à pilha os restos
+        pilhaDeRestos.push(resto)
+
+        // A cada volta ele divide o decimal por 2 e testa novamente 
+        numeroDecimal = Math.floor(numeroDecimal / 2)
+    }
+
+    console.log(pilhaDeRestos)
+    while(pilhaDeRestos.length > 0){
+
+        //pega o ultimo item do array pilhaderestos e adiciona na stringDeBinarios um a um para inverter a string pilhaDeBinarios e ficar na ordem certa, aplicando o conceito de pilha, onde o ultimo a entrar é o primeiro a sair
+        stringDeBinarios += pilhaDeRestos.pop().toString()
+    }
+    
+
+    return stringDeBinarios
+}
+
+
+console.log(decimalParaBinario(23))
