@@ -88,3 +88,33 @@ function decimalParaBinario(numeroDecimal) {
 
 
 console.log(decimalParaBinario(23))
+
+
+
+//Exercícios conversão de bases
+//conversor de bases
+
+function conversorDeBase(numDecimal, base){
+    var pilhaDeRestos = [],
+    resto,
+    stringBase = '',
+    digitos = '0123456789ABCDEF' // usado para converter em hexadecimal
+
+
+    while(numDecimal > 0){
+        resto = Math.floor(numDecimal % base) //arredondamento para baixo
+        pilhaDeRestos.push(resto)// Pega o resto e adiciona à pilha
+        numDecimal = Math.floor(numDecimal / base)
+    }
+
+    while(pilhaDeRestos.length > 0){
+        //no javaScript strings são basicamente arrays
+        //pop vai pegar o ultimo elemento do array como posição para formar a string base através da string digitos
+        stringBase += digitos[pilhaDeRestos.pop()]
+    }
+
+    return stringBase
+}
+
+
+console.log(conversorDeBase(23, 8))
