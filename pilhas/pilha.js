@@ -94,27 +94,28 @@ console.log(decimalParaBinario(23))
 //Exercícios conversão de bases
 //conversor de bases
 
-function conversorDeBase(numDecimal, base){
+function conversorDeBase(numDecimal, base){ //Ex. 123, 16
     var pilhaDeRestos = [],
     resto,
     stringBase = '',
     digitos = '0123456789ABCDEF' // usado para converter em hexadecimal
 
 
-    while(numDecimal > 0){
-        resto = Math.floor(numDecimal % base) //arredondamento para baixo
-        pilhaDeRestos.push(resto)// Pega o resto e adiciona à pilha
-        numDecimal = Math.floor(numDecimal / base)
+    while(numDecimal > 0){ //Ex. 123 ---- 7
+        resto = Math.floor(numDecimal % base) //arredondamento para baixo Ex.11 ---- 7
+        pilhaDeRestos.push(resto)// Pega o resto e adiciona à pilha Ex. [11, 7,  ]
+        numDecimal = Math.floor(numDecimal / base)// Ex. 123/16 = 7,6 --- 7 ---- 7/16 = 0
     }
 
-    while(pilhaDeRestos.length > 0){
+    while(pilhaDeRestos.length > 0){ //  Ex. array tamanho 2
         //no javaScript strings são basicamente arrays
+        //pop retira o ultimo elemento do array e atribui ao novo array
         //pop vai pegar o ultimo elemento do array como posição para formar a string base através da string digitos
-        stringBase += digitos[pilhaDeRestos.pop()]
+        stringBase += digitos[pilhaDeRestos.pop()] // Ex. ultimo elemento do array é 7, logo ele vai pegar o elemento do array digitos[] na posição 7 e atribuir ao array stringBase[7,], na segunda volta, o ultimo elemento do array pilha de restos será 11. O que pegará o elemento na posição 11 do array digitos, que no caso o array string base ficará assim stringBase[7, B]
     }
 
     return stringBase
 }
 
 
-console.log(conversorDeBase(23, 8))
+console.log(conversorDeBase(123, 2))
