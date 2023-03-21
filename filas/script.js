@@ -36,3 +36,21 @@ function Fila() {
         console.log(itens.toString())
     }
 }
+
+
+var fila = new Fila()
+
+fila.enfileirar(1)
+fila.enfileirar(3)
+fila.enfileirar(5)
+fila.enfileirar('ana')
+
+fila.imprimir()
+
+fila.desenfileirar()
+
+fila.imprimir()
+
+console.log(fila.tamanho())
+
+console.log(fila.frente())
